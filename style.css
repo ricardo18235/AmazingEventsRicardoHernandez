@@ -1,0 +1,19 @@
+header {
+    min-height: 10vh;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer{
+    min-height: 10vh;
+}
+
+.logoAmazingEvents {
+    width: 20vh;
+}
+
+.listDetailsMenu {
+    display: none;
+}
