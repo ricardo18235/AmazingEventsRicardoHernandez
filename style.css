@@ -17,3 +17,9 @@ footer{
 .listDetailsMenu {
     display: none;
 }
+
+.carousel-item {
+    height: 50vh;
+    
+    
+}
