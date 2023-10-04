@@ -17,11 +17,10 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md bg-body-tertiary navbar bg-dark border-bottom border-body"
-            data-bs-theme="dark">
+    <header class="bg-dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand " href="#">
+                <a class="navbar-brand " href="./home.html">
                     <img src="./Recursos_Amazing_Events_Task_1/amazing_brand.png" alt="Amazing Events brand"
                         class="img-fluid ms-sm-3 logoAmazingEvents">
                 </a>
@@ -34,13 +33,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-lg-0 w-100 justify-content-end align-items-center text-center">
                         <li class="nav-item mx-3">
-                            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link active" href="./pastEvents.html">Past Events</a>
+                            <a class="nav-link" aria-current="page" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item mx-3">
                             <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link active" href="./pastEvents.html">Past Events</a>
                         </li>
                         <li class="nav-item mx-3">
                             <a class="nav-link" href="./contact.html">Contact</a>
@@ -60,15 +59,104 @@
 
     </header>
     <main>
+        <!-- zona del carrusel -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="./home.html">
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg" class="d-block w-100"
+                            alt="...">
+                    </a>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h1 class="tituloCarrusel">Home</h1>
+                            <p class="fs-5 infoDelBanner">Welcome to Amazing Events, your source for entertainment and
+                                fun. Discover exciting events, concerts, festivals, and more. Join us to experience
+                                unforgettable moments!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="./upcomingEvents.html">
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_3.jpg" class="d-block w-100"
+                            alt="...">
+                    </a>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h1 class="tituloCarrusel">Upcoming Events</h1>
+                            <p class="fs-5 infoDelBanner">Get ready for the best yet to come. Explore our upcoming
+                                events and book your tickets to experience the excitement up close.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="./pastEvents.html">
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_2.jpg" class="d-block w-100 "
+                            alt="...">
+                    </a>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h1 class="tituloCarrusel">Past Events</h1>
+                            <p class="fs-5 infoDelBanner">Relive unforgettable moments with our past events. Discover
+                                the moments that made history and be part of the excitement at Amazing Events.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="./contact.html">
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_4.jpg" class="d-block w-100"
+                            alt="...">
+                    </a>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h1 class="tituloCarrusel">Contact</h1>
+                            <p class="fs-5 infoDelBanner">Have any questions or comments? We're here to assist you.
+                                Contact us through our communication channels, and we'll get back to you as soon as
+                                possible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="./details.html">
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_5.jpg" class="d-block w-100"
+                            alt="...">
+                    </a>
+                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                        <div class="text-center">
+                            <h1 class="tituloCarrusel">Stats</h1>
+                            <p class="fs-5 infoDelBanner">At Amazing Events, we take pride in our statistics. Discover
+                                interesting data and numbers that showcase our impact on the entertainment industry.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- chechbok -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content">
+                        <!-- Contenido del primer div -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
+
     <footer class="d-flex justify-content-between border-top align-items-center text-center">
-
-
         <ul class="nav d-flex ms-3">
             <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-twitter"></i></a></li>
             <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-facebook"></i></a></li>
             <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-whatsapp"></i></a></li>
+
         </ul>
 
         <p class="parrafoFooter mb-3 mt-2 me-5 text-body-secondary">© 2023 Created by Ricardo Hernandez. All Rights
