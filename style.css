@@ -20,6 +20,18 @@ footer{
 
 .carousel-item {
     height: 50vh;
-    
-    
 }
+
+#carouselExampleCaptions img {
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.tituloCarrusel {
+    text-shadow: 0rem 6px 7px black;;
+    font-size: 6rem;
+}
+
+
+
