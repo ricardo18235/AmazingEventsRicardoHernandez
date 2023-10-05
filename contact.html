@@ -64,13 +64,13 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="./home.html">
-                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg" class="d-block w-100"
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg" class="d-block w-100 img-fluid"
                             alt="...">
                     </a>
-                    <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel">Home</h1>
-                            <p class="fs-5 infoDelBanner">Welcome to Amazing Events, your source for entertainment and
+                            <h1 class="tituloCarrusel fs-2">Home</h1>
+                            <p class="fs-6 infoDelBanner">Welcome to Amazing Events, your source for entertainment and
                                 fun. Discover exciting events, concerts, festivals, and more. Join us to experience
                                 unforgettable moments!</p>
                         </div>
@@ -84,8 +84,8 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel">Upcoming Events</h1>
-                            <p class="fs-5 infoDelBanner">Get ready for the best yet to come. Explore our upcoming
+                            <h1 class="tituloCarrusel fs-2">Upcoming Events</h1>
+                            <p class="fs-6 infoDelBanner">Get ready for the best yet to come. Explore our upcoming
                                 events and book your tickets to experience the excitement up close.</p>
                         </div>
                     </div>
@@ -98,8 +98,8 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel">Past Events</h1>
-                            <p class="fs-5 infoDelBanner">Relive unforgettable moments with our past events. Discover
+                            <h1 class="tituloCarrusel fs-2">Past Events</h1>
+                            <p class="fs-6 infoDelBanner">Relive unforgettable moments with our past events. Discover
                                 the moments that made history and be part of the excitement at Amazing Events.</p>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel">Contact</h1>
-                            <p class="fs-5 infoDelBanner">Have any questions or comments? We're here to assist you.
+                            <h1 class="tituloCarrusel fs-2">Contact</h1>
+                            <p class="fs-6 infoDelBanner">Have any questions or comments? We're here to assist you.
                                 Contact us through our communication channels, and we'll get back to you as soon as
                                 possible.</p>
                         </div>
@@ -126,8 +126,8 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel">Stats</h1>
-                            <p class="fs-5 infoDelBanner">At Amazing Events, we take pride in our statistics. Discover
+                            <h1 class="tituloCarrusel fs-2">Stats</h1>
+                            <p class="fs-6 infoDelBanner">At Amazing Events, we take pride in our statistics. Discover
                                 interesting data and numbers that showcase our impact on the entertainment industry.</p>
                         </div>
                     </div>
@@ -136,12 +136,66 @@
         </div>
 
         <!-- chechbok -->
+        <!-- Contenedor de los checkboxes y la barra de búsqueda -->
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="content">
-                        <!-- Contenido del primer div -->
+                <!-- Los 5 checkboxes -->
+                <div class="col-6 col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="category1">
+                        <label class="form-check-label" for="category1">
+                            Category
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="category2">
+                        <label class="form-check-label" for="category2">
+                            Category
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="category3">
+                        <label class="form-check-label" for="category3">
+                            Category
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="category4">
+                        <label class="form-check-label" for="category4">
+                            Category
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="category5">
+                        <label class="form-check-label" for="category5">
+                            Category
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Barra de búsqueda -->
+
+                <div class="col-6 col-md-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                            aria-describedby="searchButton">
+                        <button class="btn btn-dark" type="button" id="searchButton">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                                </path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
