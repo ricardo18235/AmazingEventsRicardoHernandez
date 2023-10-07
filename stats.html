@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazing Events - Stats</title>
+    <title>Amazing Events - Upcoming Events</title>
     <!-- link de boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -36,7 +36,7 @@
                             <a class="nav-link" aria-current="page" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
+                            <a class="nav-link active" href="./upcomingEvents.html">Upcoming Events</a>
                         </li>
                         <li class="nav-item mx-3">
                             <a class="nav-link" href="./pastEvents.html">Past Events</a>
@@ -45,7 +45,7 @@
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                         <li class="nav-item mx-3">
-                            <a class="nav-link active" href="./stats.html">Stats</a>
+                            <a class="nav-link" href="./stats.html">Stats</a>
                         </li>
                         <li class="nav-item mx-3 listDetailsMenu">
                             <a class="nav-link" href="#">Details</a>
@@ -64,12 +64,12 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="./home.html">
-                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg" class="d-block w-100 img-fluid"
-                            alt="...">
+                        <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg"
+                            class="d-block w-100 img-fluid" alt="...">
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel fs-2">Home</h1>
+                            <h1 class="tituloCarrusel fs-1 ">Home</h1>
                             <p class="fs-6 infoDelBanner">Welcome to Amazing Events, your source for entertainment and
                                 fun. Discover exciting events, concerts, festivals, and more. Join us to experience
                                 unforgettable moments!</p>
@@ -84,7 +84,7 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel fs-2">Upcoming Events</h1>
+                            <h1 class="tituloCarrusel fs-1">Upcoming Events</h1>
                             <p class="fs-6 infoDelBanner">Get ready for the best yet to come. Explore our upcoming
                                 events and book your tickets to experience the excitement up close.</p>
                         </div>
@@ -98,7 +98,7 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel fs-2">Past Events</h1>
+                            <h1 class="tituloCarrusel fs-1">Past Events</h1>
                             <p class="fs-6 infoDelBanner">Relive unforgettable moments with our past events. Discover
                                 the moments that made history and be part of the excitement at Amazing Events.</p>
                         </div>
@@ -112,7 +112,7 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel fs-2">Contact</h1>
+                            <h1 class="tituloCarrusel fs-1">Contact</h1>
                             <p class="fs-6 infoDelBanner">Have any questions or comments? We're here to assist you.
                                 Contact us through our communication channels, and we'll get back to you as soon as
                                 possible.</p>
@@ -126,7 +126,7 @@
                     </a>
                     <div class="carousel-caption d-flex align-items-center justify-content-center h-100">
                         <div class="text-center">
-                            <h1 class="tituloCarrusel fs-2">Stats</h1>
+                            <h1 class="tituloCarrusel fs-1">Stats</h1>
                             <p class="fs-6 infoDelBanner">At Amazing Events, we take pride in our statistics. Discover
                                 interesting data and numbers that showcase our impact on the entertainment industry.</p>
                         </div>
@@ -135,85 +135,88 @@
             </div>
         </div>
 
-        <!-- chechbok -->
-        <!-- Contenedor de los checkboxes y la barra de búsqueda -->
+        <!-- area de la tabla -->
 
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Los 5 checkboxes -->
-                <div class="col-6 col-md-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="category1">
-                        <label class="form-check-label" for="category1">
-                            Category
-                        </label>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="category2">
-                        <label class="form-check-label" for="category2">
-                            Category
-                        </label>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="category3">
-                        <label class="form-check-label" for="category3">
-                            Category
-                        </label>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="category4">
-                        <label class="form-check-label" for="category4">
-                            Category
-                        </label>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="category5">
-                        <label class="form-check-label" for="category5">
-                            Category
-                        </label>
-                    </div>
-                </div>
+        <div class="container p-5">
+            <table class="table table-bordered border-dark shadow">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="table-active table-dark">Events Statistics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Events with highest % of assistance</td>
+                        <td>Events with lowest % of assistance</td>
+                        <td>Events with larger capacity</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="table-active table-dark">Upcoming Events Statistics by Category</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>Category</td>
+                        <td>Revenues</td>
+                        <td>Porcentage of assistance</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="table-active table-dark">Past Events Statistics by Category </th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>Categories</td>
+                        <td>Revenues</td>
+                        <td>Porcentage of assistance</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
 
-                <!-- Barra de búsqueda -->
+                    </tr>
 
-                <div class="col-6 col-md-2">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                            aria-describedby="searchButton">
-                        <button class="btn btn-dark" type="button" id="searchButton">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-search" viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+                </tbody>
+            </table>
         </div>
+
 
 
     </main>
 
-    <footer class="d-flex justify-content-between border-top align-items-center text-center">
+    <footer class="d-flex justify-content-between border-top align-items-center text-center bg-dark">
         <ul class="nav d-flex ms-3">
-            <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-twitter"></i></a></li>
-            <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-facebook"></i></a></li>
-            <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-instagram"></i></a></li>
-            <li class="ms-3 ms-md-5"><a class="text-body-secondary" href="#"><i class="bi bi-whatsapp"></i></a></li>
+            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-twitter"></i></a></li>
+            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-facebook"></i></a></li>
+            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-instagram"></i></a></li>
+            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-whatsapp"></i></a></li>
 
         </ul>
 
-        <p class="parrafoFooter mb-3 mt-2 me-5 text-body-secondary">© 2023 Created by Ricardo Hernandez. All Rights
+        <p class="parrafoFooter mb-3 mt-2 me-5 text-white">© 2023 Created by Ricardo Hernandez. All Rights
             Reserved.</p>
 
     </footer>

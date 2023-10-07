@@ -41,3 +41,6 @@ footer {
     background-blend-mode: overlay;
 }
 
+td {
+    height: 2rem;
+}
