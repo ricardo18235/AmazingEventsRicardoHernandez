@@ -1,9 +1,9 @@
-const contenedorDeCards = document.getElementById("contentCards");
+const contenedorHomeCard = document.getElementById("contenedorHomeCard");
 const arrayDeEventos = data.events;
 
 
 for (let event of arrayDeEventos) {
-    contenedorDeCards.classList.add('d-flex', 'justify-content-around', 'flex-wrap', 'cardaround');
+    contenedorHomeCard.classList.add('d-flex', 'justify-content-around', 'flex-wrap', 'cardaround');
     const creadorCards = document.createElement("div");
     creadorCards.classList.add('d-flex', 'justify-content-around', 'flex-wrap');
     creadorCards.innerHTML = (`
@@ -18,8 +18,11 @@ for (let event of arrayDeEventos) {
                     <a href="#" class="btn btn-dark">Details</a>
                 </div>
             </div>
-        </div>
-    </div>`)
+        </div>`)
 
-    contentCards.appendChild(creadorCards);
+    contenedorHomeCard.appendChild(creadorCards);
 }
+
+const selectorCheckbox1 = document.getElementById('selectorCheckbox1')
+selectorCheckbox1.classList.add ('col-6')
+
