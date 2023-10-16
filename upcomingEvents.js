@@ -23,3 +23,9 @@ for (const event of arrayDeEventos) {
         contenedorUpcomingCard.appendChild(creadorCards)
     }
 }
+
+const barraBusqueda = document.getElementById('barraBusqueda')
+barraBusqueda.classList.add('mx-auto', 'mx-lg-0')
+
+const header = document.getElementById('header')
+header.classList.add('sticky-top')

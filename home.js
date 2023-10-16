@@ -23,6 +23,11 @@ for (let event of arrayDeEventos) {
     contenedorHomeCard.appendChild(creadorCards);
 }
 
-const selectorCheckbox1 = document.getElementById('selectorCheckbox1')
-selectorCheckbox1.classList.add ('col-6')
+const barraBusqueda = document.getElementById('barraBusqueda')
+barraBusqueda.classList.add('mx-auto', 'mx-lg-0')
+
+const header = document.getElementById('header')
+header.classList.add('sticky-top')
+
+
 
