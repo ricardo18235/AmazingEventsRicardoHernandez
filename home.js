@@ -2,6 +2,7 @@ const contenedorHomeCard = document.getElementById("contenedorHomeCard");
 const arrayDeEventos = data.events;
 
 
+
 for (let event of arrayDeEventos) {
     contenedorHomeCard.classList.add('d-flex', 'justify-content-around', 'flex-wrap', 'cardaround');
     const creadorCards = document.createElement("div");
@@ -23,11 +24,58 @@ for (let event of arrayDeEventos) {
     contenedorHomeCard.appendChild(creadorCards);
 }
 
-const barraBusqueda = document.getElementById('barraBusqueda')
-barraBusqueda.classList.add('mx-auto', 'mx-lg-0')
-
 const header = document.getElementById('header')
 header.classList.add('sticky-top')
+
+// checkbox
+
+const contenedorCheckbox = document.getElementById('contenedorCheckbox');
+const arrayDeCheckbox = data.events;
+const categoriasUnicas = new Set();
+
+for (const event of arrayDeCheckbox) {
+    const categoria = event.category;
+
+    if (!categoriasUnicas.has(categoria)) {
+        categoriasUnicas.add(categoria);
+
+        contenedorCheckbox.classList.add('container-fluid', 'pt-1', 'pb-1', 'd-flex', 'flex-md-column', 'flex-wrap', 'flex-lg-row', 'flex-sm-column', 'justify-content-between', 'align-items-center', 'justify-content-center', 'text-center');
+        const creadorCards = document.createElement("div");
+        creadorCards.classList.add('row', 'd-flex', 'align-items-center');
+        creadorCards.innerHTML = (`
+            <div class="col-md-2 col-6">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="${categoria}">
+                    <label class="form-check-label text-white" for="${categoria}">
+                        ${categoria}
+                    </label>
+                </div>
+ 
+            </div>`
+        );
+
+        contenedorCheckbox.appendChild(creadorCards);
+    }
+}
+
+// barra
+const barraBusqueda = document.createElement("div");
+barraBusqueda.classList.add('col-8', 'col-md-4', 'col-sm-6', 'col-lg-2', 'mx-auto', 'mx-lg-0');
+barraBusqueda.innerHTML = (`
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="searchButton">
+        <button class="btn btn-dark" type="button" id="searchButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
+                </path>
+            </svg>
+        </button>
+    </div>
+`);
+
+// Agregar la barra de búsqueda al contenedorCheckbox
+contenedorCheckbox.appendChild(barraBusqueda);
+
 
 
 
