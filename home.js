@@ -1,8 +1,6 @@
 const contenedorHomeCard = document.getElementById("contenedorHomeCard");
 const arrayDeEventos = data.events;
 
-
-
 for (let event of arrayDeEventos) {
     contenedorHomeCard.classList.add('d-flex', 'justify-content-around', 'flex-wrap', 'cardaround');
     const creadorCards = document.createElement("div");
@@ -40,9 +38,9 @@ for (const event of arrayDeCheckbox) {
         categoriasUnicas.add(categoria);
 
         contenedorCheckbox.classList.add('container-fluid', 'pt-1', 'pb-1', 'd-flex', 'flex-md-column', 'flex-wrap', 'flex-lg-row', 'flex-sm-column', 'justify-content-between', 'align-items-center', 'justify-content-center', 'text-center');
-        const creadorCards = document.createElement("div");
-        creadorCards.classList.add('row', 'd-flex', 'align-items-center');
-        creadorCards.innerHTML = (`
+        const creadorCheckbox = document.createElement("div");
+        creadorCheckbox.classList.add('row', 'd-flex', 'align-items-center');
+        creadorCheckbox.innerHTML = (`
             <div class="col-md-2 col-6">
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="${categoria}">
@@ -54,7 +52,7 @@ for (const event of arrayDeCheckbox) {
             </div>`
         );
 
-        contenedorCheckbox.appendChild(creadorCards);
+        contenedorCheckbox.appendChild(creadorCheckbox);
     }
 }
 
@@ -70,10 +68,7 @@ barraBusqueda.innerHTML = (`
                 </path>
             </svg>
         </button>
-    </div>
-`);
-
-// Agregar la barra de búsqueda al contenedorCheckbox
+    </div>`);
 contenedorCheckbox.appendChild(barraBusqueda);
 
 
