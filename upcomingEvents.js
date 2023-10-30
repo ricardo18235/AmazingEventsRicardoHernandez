@@ -1,77 +1,104 @@
-const contenedorUpcomingCard = document.getElementById('contenedorUpcomingCard')
-const arrayDeEventos = data.events
+const contenedorUpcomingCard = document.getElementById("contenedorUpcomingCard");
+const arrayDeEventos = data.events;
 const arrayDeCurrentDate = data.currentDate
-
-for (const event of arrayDeEventos) {
-    if (event.date > arrayDeCurrentDate) {
-        contenedorUpcomingCard.classList.add('d-flex', 'justify-content-around', 'flex-wrap', 'cardaround')
-        const creadorCards = document.createElement('div')
-        creadorCards.classList.add('d-flex', 'justify-content-around', 'flex-wrap')
-        creadorCards.innerHTML = (
-            `<div class="card my-3" style="width: 18rem;">
-                <img src=${event.image} class="card-img-top" height="191"
-                alt="food fair">
-                <div class="card-body">
-                    <h5 class="card-title">${event.name}</h5>
-                    <p class="card-text text-truncate">${event.description}</p>
-                    <div class="d-flex justify-content-between">
-                        <p>${event.price}</p>
-                        <a href="./details.html?_id=${event._id}" class="btn btn-dark">Details</a>
-                    </div>
-                </div>
-            </div>`)
-        contenedorUpcomingCard.appendChild(creadorCards)
-    }
-}
-
-// const barraBusqueda = document.getElementById('barraBusqueda')
-// barraBusqueda.classList.add('mx-auto', 'mx-lg-0')
-
-const header = document.getElementById('header')
-header.classList.add('sticky-top')
 
 // checkbox
 
-const contenedorCheckbox = document.getElementById('contenedorCheckbox');
-const arrayDeCheckbox = data.events;
-const categoriasUnicas = new Set();
+let contenedorCheckbox = document.getElementById("contenedorCheckbox")
+contenedorCheckbox.classList.add("d-flex", "justify-content-around", "flex-wrap", "w-75", "align-self-center", "pb-3");
 
-for (const event of arrayDeCheckbox) {
-    const categoria = event.category;
+contenedorCheckbox.innerHTML
 
-    if (!categoriasUnicas.has(categoria)) {
-        categoriasUnicas.add(categoria);
 
-        contenedorCheckbox.classList.add('container-fluid', 'pt-1', 'pb-1', 'd-flex', 'flex-md-column', 'flex-wrap', 'flex-lg-row', 'flex-sm-column', 'justify-content-between', 'align-items-center', 'justify-content-center', 'text-center');
-        const creadorCheckbox = document.createElement("div");
-        creadorCheckbox.classList.add('row', 'd-flex', 'align-items-center');
-        creadorCheckbox.innerHTML = (`
-            <div class="col-md-2 col-6">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="${categoria}">
-                    <label class="form-check-label text-white" for="${categoria}">
-                        ${categoria}
-                    </label>
+const misCategorias = data.events.map(evento => evento.category)
+
+const filtroCategorias = (arr) => {
+    return arr.filter((valor, indice) => arr.indexOf(valor) === indice);
+}
+
+const arrayMisCategorias = filtroCategorias(misCategorias)
+
+
+arrayMisCategorias.forEach(category => {
+
+    const checkbox = document.createElement("div")
+    checkbox.classList.add("form-check", "d-flex", "text-white", "justify-content-center", "align-self-center")
+    checkbox.innerHTML = `<input class="form-check-input" type="checkbox" value="${category}" id="${arrayMisCategorias.indexOf(category) + 1}">
+    <label class="form-check-label" for="${arrayMisCategorias.indexOf(category) + 1}">
+      ${category}
+    </label>`
+
+    contenedorCheckbox.appendChild(checkbox)
+})
+
+// funcion para pintar mis cards
+
+function crearCards(arrayEventos) {
+    for (let event of arrayEventos) {
+        if (event.date > arrayDeCurrentDate) {
+            contenedorUpcomingCard.classList.add('d-flex', 'justify-content-around', 'flex-wrap', 'cardaround');
+            const creadorCards = document.createElement("div");
+            creadorCards.classList.add('d-flex', 'justify-content-around', 'flex-wrap');
+            creadorCards.innerHTML = (`
+        <div class="card my-3" style="width: 18rem;">
+            <img src="${event.image}" class="card-img-top" height="191"
+            alt="food fair">
+            <div class="card-body">
+                <h5 class="card-title">${event.name}</h5>
+                <p class="card-text text-truncate">${event.description}</p>
+                <div class="d-flex justify-content-between">
+                    <p>$ ${event.price}</p>
+                    <a href="./details.html?_id=${event._id}" class="btn btn-dark">Details</a>
                 </div>
- 
-            </div>`
-        );
+            </div>
+        </div>`)
 
-        contenedorCheckbox.appendChild(creadorCheckbox);
+            contenedorUpcomingCard.appendChild(creadorCards);
+        }
+    }
+
+}
+
+crearCards(arrayDeEventos);
+
+// search y checkbox
+
+let botonBusqueda = document.getElementById("botonBusqueda")
+let inputBusqueda = document.getElementById("inputBusqueda")
+let formulario = document.getElementById("contenedorCheckbox")
+
+botonBusqueda.addEventListener('click', filtrado)
+formulario.addEventListener('change', filtrado)
+
+function filtrado() {
+    contenedorUpcomingCard.innerHTML = "";
+
+    const valorInput = inputBusqueda.value.toLowerCase();
+    const checked = document.querySelectorAll('input[type=checkbox]:checked');
+    const arrayChecked = Array.from(checked);
+    const nuevoArrayCategoryChecked = arrayChecked.map(checkbox => checkbox.value);
+
+    if (nuevoArrayCategoryChecked.length === 0 && valorInput === "") {
+        // No hay categorías seleccionadas y no hay valor en el campo de búsqueda
+        // Mostrar todos los eventos "upcoming"
+        crearCards(arrayDeEventos.filter(evento => evento.date > arrayDeCurrentDate));
+    } else {
+        // Realizar el filtrado basado en categorías y búsqueda
+        const resultados = arrayDeEventos.filter(evento => {
+            if (nuevoArrayCategoryChecked.length > 0 && valorInput !== "") {
+                return evento.date > arrayDeCurrentDate && nuevoArrayCategoryChecked.includes(evento.category) && evento.name.toLowerCase().includes(valorInput);
+            } else if (nuevoArrayCategoryChecked.length > 0) {
+                return evento.date > arrayDeCurrentDate && nuevoArrayCategoryChecked.includes(evento.category);
+            } else if (valorInput !== "") {
+                return evento.date > arrayDeCurrentDate && evento.name.toLowerCase().includes(valorInput);
+            }
+        });
+
+        if (resultados.length > 0) {
+            crearCards(resultados);
+        } else {
+            contenedorUpcomingCard.innerHTML = `<h2 class="text-white">"Event not found..."</h2>`;
+        }
     }
 }
 
-// barra
-const barraBusqueda = document.createElement("div");
-barraBusqueda.classList.add('col-8', 'col-md-4', 'col-sm-6', 'col-lg-2', 'mx-auto', 'mx-lg-0');
-barraBusqueda.innerHTML = (`
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="searchButton">
-        <button class="btn btn-dark" type="button" id="searchButton">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                </path>
-            </svg>
-        </button>
-    </div>`);
-contenedorCheckbox.appendChild(barraBusqueda);
