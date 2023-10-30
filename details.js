@@ -22,7 +22,7 @@ function funcionCards() {
             <p class="card-text"><strong>Category:</strong> ${evento.category}</p>
             <p class="card-text"><strong>Place:</strong> ${evento.place}</p>
             <p class="card-text"><strong>Capacity:</strong> ${evento.capacity}</p>
-            <p class="card-text"><strong>Assistance:</strong> ${evento.assistance}</p>
+            <p class="card-text"> ${evento.assistance==null?"<strong>Estimate: </strong>"+evento.estimate:"<strong>Assistance: </strong>"+evento.assistance}</p>
             <p class="card-text"><strong>Price:</strong> $ ${evento.price}</p>
             </div>
         </div>
