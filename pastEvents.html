@@ -1,141 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amazing Events - Past Events</title>
     <!-- link de boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- enlace al css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./Recursos_Amazing_Events_Task_1/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./Recursos_Amazing_Events_Task_1/favicon.png"
+      type="image/x-icon"
+    />
     <!-- link de iconos boostrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header id="header" class="bg-dark">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand " href="./home.html">
-                    <img src="./Recursos_Amazing_Events_Task_1/amazing_brand.png" alt="Amazing Events brand"
-                        class="img-fluid ms-sm-3 logoAmazingEvents">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
-                </button>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./home.html">
+            <img
+              src="./Recursos_Amazing_Events_Task_1/amazing_brand.png"
+              alt="Amazing Events brand"
+              class="img-fluid ms-sm-3 logoAmazingEvents"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-lg-0 w-100 justify-content-end align-items-center text-center">
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" aria-current="page" href="./home.html">Home</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="./upcomingEvents.html">Upcoming Events</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link active" href="./pastEvents.html">Past Events</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="./contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item mx-3">
-                            <a class="nav-link" href="./stats.html">Stats</a>
-                        </li>
-                        <li class="nav-item mx-3 listDetailsMenu">
-                            <a class="nav-link" href="#">Details</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </div>
-        </nav>
-
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav me-auto mb-lg-0 w-100 justify-content-end align-items-center text-center"
+            >
+              <li class="nav-item mx-3">
+                <a class="nav-link" aria-current="page" href="./home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="./upcomingEvents.html"
+                  >Upcoming Events</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link active" href="./pastEvents.html"
+                  >Past Events</a
+                >
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="./stats.html">Stats</a>
+              </li>
+              <li class="nav-item mx-3 listDetailsMenu">
+                <a class="nav-link" href="#">Details</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <!-- zona del carrusel -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner">
-                <h1
-                    class="position-absolute text-white z-1 display-1 fw-bold d-flex justify-content-center w-100 align-items-center h-100 carousel-title tituloCarrusel fs-1 ">
-                    PAST EVENTS</h1>
-                <div class="carousel-item active">
-                    <img src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg" class="d-block w-100 img-fluid"
-                        alt="...">
-                    <div class="carousel-caption d-flex align-items-center justify-content-center">
-                    </div>
-                </div>
+      <!-- zona del carrusel -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-inner">
+          <h1
+            class="position-absolute text-white z-1 display-1 fw-bold d-flex justify-content-center w-100 align-items-center h-100 carousel-title tituloCarrusel fs-1"
+          >
+            PAST EVENTS
+          </h1>
+          <div class="carousel-item active">
+            <img
+              src="./Recursos_Amazing_Events_Task_1/optional_banner_1.jpg"
+              class="d-block w-100 img-fluid"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex align-items-center justify-content-center"
+            ></div>
+          </div>
 
-                <div class="carousel-item">
-                    <img src="./Recursos_Amazing_Events_Task_1/optional_banner_3.jpg" class="d-block w-100" alt="...">
-                </div>
+          <div class="carousel-item">
+            <img
+              src="./Recursos_Amazing_Events_Task_1/optional_banner_3.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
 
-                <div class="carousel-item">
-                    <img src="./Recursos_Amazing_Events_Task_1/optional_banner_2.jpg" class="d-block w-100 " alt="...">
-                </div>
+          <div class="carousel-item">
+            <img
+              src="./Recursos_Amazing_Events_Task_1/optional_banner_2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
 
-                <div class="carousel-item">
-                    <img src="./Recursos_Amazing_Events_Task_1/optional_banner_4.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="./Recursos_Amazing_Events_Task_1/optional_banner_5.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
+          <div class="carousel-item">
+            <img
+              src="./Recursos_Amazing_Events_Task_1/optional_banner_4.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Recursos_Amazing_Events_Task_1/optional_banner_5.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
         </div>
+      </div>
 
-        <!-- checkbox y busqueda -->
+      <!-- checkbox y busqueda -->
 
-        <div class="d-flex ">
-            <div id="contenedorCheckbox" class="flex-wrap">
-
-                <div class="d-flex justify-content-around flex-wrap py-4">
-
-                </div>
-
-            </div>
-            <div class="align-self-center px-3 wsearch" onsubmit="return false;">
-                <form class="d-flex justify-content-center align-self-center">
-                    <input class="form-control me-2 justify-content-center align-self-center" id="inputBusqueda"
-                        placeholder="Search">
-                    <button class="btn btn-secondary justify-content-center align-self-center"
-                        id="botonBusqueda">Search</button>
-                </form>
-            </div>
+      <div class="d-flex">
+        <div id="contenedorCheckbox" class="flex-wrap">
+          <div class="d-flex justify-content-around flex-wrap py-4"></div>
         </div>
-
-        <!-- area de las cards -->
-
-        <div id="contenedorPastCard">
-
+        <div class="align-self-center px-3 wsearch" onsubmit="return false;">
+          <form class="d-flex justify-content-center align-self-center">
+            <input
+              class="form-control me-2 justify-content-center align-self-center"
+              id="inputBusqueda"
+              placeholder="Search"
+            />
+            <button
+              class="btn btn-secondary justify-content-center align-self-center"
+              id="botonBusqueda"
+            >
+              Search
+            </button>
+          </form>
         </div>
+      </div>
 
+      <!-- area de las cards -->
 
+      <div id="contenedorPastCard"></div>
     </main>
 
-    <footer class="d-flex justify-content-between border-top align-items-center text-center bg-dark">
-        <ul class="nav d-flex ms-3">
-            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-twitter"></i></a></li>
-            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-facebook"></i></a></li>
-            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-instagram"></i></a></li>
-            <li class="ms-3 ms-md-5"><a class="text-white" href="#"><i class="bi bi-whatsapp"></i></a></li>
+    <footer
+      class="d-flex justify-content-between border-top align-items-center text-center bg-dark"
+    >
+      <ul class="nav d-flex ms-3">
+        <li class="ms-3 ms-md-5">
+          <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+        </li>
+        <li class="ms-3 ms-md-5">
+          <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+        </li>
+        <li class="ms-3 ms-md-5">
+          <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+        </li>
+        <li class="ms-3 ms-md-5">
+          <a class="text-white" href="#"><i class="bi bi-whatsapp"></i></a>
+        </li>
+      </ul>
 
-        </ul>
-
-        <p class="parrafoFooter mb-3 mt-2 me-5 text-white">© 2023 Created by Ricardo Hernandez. All Rights
-            Reserved.</p>
-
+      <p class="parrafoFooter mb-3 mt-2 me-5 text-white">
+        © 2023 Created by Ricardo Hernandez. All Rights Reserved.
+      </p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="./data.js"></script>
-    <script src="./pastEvents.js"></script>
-</body>
-
+    <script src="./pastEvents.js" type="module"></script>
+  </body>
 </html>
