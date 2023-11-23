@@ -1,4 +1,4 @@
-# Documentación del Repositorio de GitHub
+# Amazing Events
 
 Este repositorio contiene un proyecto de JavaScript que utiliza módulos para organizar el código. El proyecto crea una interfaz de usuario con tarjetas y proporciona funcionalidades de búsqueda y filtrado. 
 
